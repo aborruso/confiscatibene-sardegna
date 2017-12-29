@@ -6,7 +6,7 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 
 // carico i dati e li aggiungo sulla mappa
 // dati da https://docs.google.com/spreadsheets/d/1YdY0TASPL_hLWt2P9-LsNMK59IKMatWOOX1G7V1NWgw/edit#gid=0
-var gsheetSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ53_TTsmwPXyzPeDbMgbU-Mn0A4PAw0u3XIrgyNOouHZ85_tIK-cCc01zgEU3Azyi372ky1jPIPnvw/pub?gid=0&single=true&output=csv';
+var gsheetSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRj_8QPjxAq9VDaTvU1xbR9ZSJls4pLY9jN0itafpMuqXgMT05oGNHeGG8bab1cTZF7_G_dL57AvB49/pub?gid=0&single=true&output=csv';
 var skyData = omnivore.csv(gsheetSource, null, L.mapbox.featureLayer()).addTo(map);
 
 
@@ -17,10 +17,10 @@ skyData.on('click', function(e) {
 
   var feature = e.layer.feature;
   var title = feature.properties.Titolo;
-  var place = feature.properties.Località;
-  var date = feature.properties.Data;
-  var content = feature.properties.Contenuto;
-  var sommario = feature.properties.Sommario;
+  var place = feature.properties.Comune;
+  // var date = feature.properties.Data;
+  var content = feature.properties.Descrizione;
+  var sommario = feature.properties.Autori;
 
   // Modal Content
   $("#marker_title").html(title);
