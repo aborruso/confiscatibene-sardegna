@@ -1,3 +1,15 @@
 header.masthead {
     background-color: #EB593C;
 }
+
+.byline {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  font-family: Lora,'Times New Roman',serif;
+}
+
+.blockquote {
+    border-left: 5px solid #EB593C;
+    padding-left: 1em;
+}
