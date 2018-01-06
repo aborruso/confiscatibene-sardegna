@@ -70,8 +70,8 @@
     font-weight: 700;
   }
 
-  .fa-map-marker, .fa-address-card, .fa-share, .fa-envelope, .fa-calendar {
-    color:#ED1C24;
+  .fa-map-marker, .fa-address-card, .fa-share, .fa-envelope, .fa-home {
+    color:#EB593C;
   }
 
   h5#marker_contacts {
@@ -84,7 +84,7 @@
 
   hr {
     margin-left: 15px;
-    color:#ed1c24;
+    color:#EB593C;
     border-style: solid none;
     border-width: 4px 0;
     margin: 18px 0;
