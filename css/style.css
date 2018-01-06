@@ -13,3 +13,12 @@ header.masthead {
     border-left: 5px solid #EB593C;
     padding-left: 1em;
 }
+
+#mainNav.is-fixed .navbar-brand:hover, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
+    color: #EB593C;
+}
+
+
+.navbar-brand {
+    font-size: 1rem;
+  }
