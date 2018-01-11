@@ -25,7 +25,7 @@ cbData.on('click', function(e) {
 
   // Modal Content
   $("#marker_title").html(title);
-  $("#marker_place").html("<i class='fa fa-map-marker' aria-hidden='true'></i> " + place + "<br><i class='fa fa-home' aria-hidden='true'></i> Beni confiscati: " + beniconfiscati + " <i class='fa fa-repeat' aria-hidden='true'></i> Beni riusati: "+ beniriusati);
+  $("#marker_place").html("<span><i class='fa fa-map-marker' aria-hidden='true'></i> " + place + "<br></span><span><i class='fa fa-home' aria-hidden='true'></i> Beni confiscati: " + beniconfiscati + "</span><br><span> <i class='fa fa-repeat' aria-hidden='true'></i> Beni riusati: "+ beniriusati + "</span>");
   $("#marker_content").html(sommario + "<br><br>" + content);
 //  $("#marker_contacts").html("<i class='fa fa-address-card' aria-hidden='true'></i> " + email + " | " + website);
   $('#exampleModal').modal('show');
