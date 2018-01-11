@@ -93,20 +93,3 @@
 .blockquote {
     font-size: 1.6rem;
 }
-
-
-
-div a {
-  color:#EB593C;
-  text-decoration:none;
-}
-
-div a:hover {
-  text-decoration:underline;
-  color:#EB593C;
-}
-
-
-footer li.list-inline-item > a{
-  color:#EB593C;
-}
