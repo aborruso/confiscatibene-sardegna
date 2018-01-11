@@ -30,6 +30,6 @@ cbData.on('click', function(e) {
   $("#marker_place").html("<span><i class='fa fa-map-marker' aria-hidden='true'></i> " + place + "<br></span><span><i class='fa fa-home' aria-hidden='true'></i> Beni confiscati: " + beniconfiscati + "</span><br><span> <i class='fa fa-repeat' aria-hidden='true'></i> Beni riusati: "+ beniriusati + "</span>");
   $("#marker_content").html(sommario + "<br><br>" + content);
 //  $("#marker_contacts").html("<i class='fa fa-address-card' aria-hidden='true'></i> " + email + " | " + website);
-  $("#marker_media").html("<img src='../" + foto + "' width='100%'/><br><iframe src='../" + video + "' frameborder='0' scrolling='no' width='100%' height='450px'></iframe>");
+//  $("#marker_media").html("<img src='../" + foto + "' width='100%'/><br><iframe src='../" + video + "' frameborder='0' scrolling='no' width='100%' height='450px'></iframe>");
   $('#exampleModal').modal('show');
 });
