@@ -19,12 +19,13 @@ cbData.on('click', function(e) {
   var title = feature.properties.Titolo;
   var place = feature.properties.Comune;
   var beniconfiscati = feature.properties.BeniConfiscati;
+  var beniriusati = feature.properties.BeniRiutilizzati;
   var content = feature.properties.Descrizione;
   var sommario = feature.properties.Autori;
 
   // Modal Content
   $("#marker_title").html(title);
-  $("#marker_place").html("<i class='fa fa-map-marker' aria-hidden='true'></i> " + place + " <i class='fa fa-home' aria-hidden='true'></i> Beni confiscati: " + beniconfiscati);
+  $("#marker_place").html("<i class='fa fa-map-marker' aria-hidden='true'></i> " + place + "<br><i class='fa fa-home' aria-hidden='true'></i> Beni confiscati: " + beniconfiscati + " <i class='fa fa-repeat' aria-hidden='true'></i> Beni riusati: "+ beniriusati);
   $("#marker_content").html(sommario + "<br><br>" + content);
 //  $("#marker_contacts").html("<i class='fa fa-address-card' aria-hidden='true'></i> " + email + " | " + website);
   $('#exampleModal').modal('show');

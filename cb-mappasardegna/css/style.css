@@ -70,7 +70,7 @@
     font-weight: 700;
   }
 
-  .fa-map-marker, .fa-address-card, .fa-share, .fa-envelope, .fa-home {
+  .fa-map-marker, .fa-address-card, .fa-share, .fa-envelope, .fa-home, .fa-repeat {
     color:#EB593C;
   }
 
@@ -92,4 +92,21 @@
 
 .blockquote {
     font-size: 1.6rem;
+}
+
+
+
+div a {
+  color:#EB593C;
+  text-decoration:none;
+}
+
+div a:hover {
+  text-decoration:underline;
+  color:#EB593C;
+}
+
+
+footer li.list-inline-item > a{
+  color:#EB593C;
 }
