@@ -89,3 +89,7 @@
     border-width: 4px 0;
     margin: 18px 0;
 }
+
+.blockquote {
+    font-size: 1.6rem;
+}
