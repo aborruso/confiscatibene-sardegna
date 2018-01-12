@@ -38,3 +38,7 @@ header.masthead {
   footer li.list-inline-item > a{
     color:#EB593C;
   }
+
+mark {
+   padding: 0px;
+}
