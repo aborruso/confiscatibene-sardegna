@@ -9,8 +9,27 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 var gsheetSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRj_8QPjxAq9VDaTvU1xbR9ZSJls4pLY9jN0itafpMuqXgMT05oGNHeGG8bab1cTZF7_G_dL57AvB49/pub?gid=0&single=true&output=csv';
 var cbData = omnivore.csv(gsheetSource, null, L.mapbox.featureLayer()).addTo(map);
 
+// funzione per I FILTRI
 
-// associo ai dati l'apertura della modale
+$('#search').keyup(search);
+function search() {
+    // get the value of the search input field
+    //    var searchString = $('#search').val().toLowerCase();
+    var searchString = $('#search').val();
+
+    cbData.setFilter(showComune);
+
+    // here we're simply comparing the 'state' property of each marker
+    // to the search string, seeing whether the former contains the latter.
+    function showComune(feature) {
+        return feature.properties.Comune
+            .toLowerCase()
+            .search(searchString) !== -1;
+    }
+}
+
+
+// Funzione per la MODALE
 cbData.on('click', function(e) {
   // Force close the popup.// ma in realtà c'è un display none perché Leaflet non consente di disabilitare il popup...
   e.layer.closePopup();
