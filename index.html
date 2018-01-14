@@ -14,14 +14,21 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
+    <!-- Leaflet/Mapbox for map -->
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/map.css" rel="stylesheet">
 
   </head>
 
@@ -98,7 +105,38 @@ Abbiamo raccolto numerosi articoli delle testate locali e nazionali, che raccont
                       <br><br><mark><strong>Una precisazione:</strong></mark> i beni immobili confiscati in via definitiva in Sardegna aggiornato al 27/09/2017 sono 102, ma questo numero si riferisce alle particelle catastali singole e non all'intero bene: nella maggior parte dei casi, un terreno o un appartamento sono formati da più particelle catastali che rappresentano (per l’ ANBSC) più beni confiscati. A questi 102 abbiamo sottratto i beni affidati ad altri enti ed abbiamo aggregato le particelle dei singoli beni, fino ad un totale di 51 immobili.
                     </p>
             <h2 id="mappa" class="section-heading">Mappa del riuso</h2>
-              <p><iframe src="cb-mappasardegna/" width="100%" height="650" scrolling="no" frameborder="0"></iframe></p>
+            <!-- INIZIO mappa integrata -->
+
+            <div id='map'>
+              <input id='search' class='search-ui' placeholder='Cerca un Comune' />
+            </div>
+
+            <!-- Modal to be populated on click -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="modal-title">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h2 id="marker_title" class=""></h2>
+                    </div>
+                    <hr class="hr-primary" />
+                    <h3 id="marker_place"></h3>
+                    <p id="marker_content" class=""></p>
+                    <div id="marker_media" class=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+                <script src="js/map.js"></script>
+
+            <!-- FINE mappa integrata -->
+
+
+
             <h2 id="foia" class="section-heading">Le richieste FOIA</h2>
               <span class="byline">di Sara D'Angelo e Elisa Mulas</span>
                   <p>Per conoscere lo stato attuale dei beni confiscati in Sardegna il punto di partenza è stato il dataset elaborato da Open Re.G.I.O, piattaforma ufficiale dell’Agenzia Nazionale per l’Amministrazione dei Beni Sequestrati e Confiscati alla criminalità organizzata (<a target="_blank" href="https://openregio.it/statistiche/visualizza/beni_destinati/immobili">leggi</a>), da cui abbiamo appreso quali fossero i Comuni interessati, nei siti dei quali abbiamo verificato che fossero presenti (come previsto dalla normativa) i dati in formato aperto riguardanti i beni ed il loro riutilizzo. Nella maggior parte dei casi la sezione amministrazione trasparente non presentava affatto i dati, ed in rari casi potevano ritenersi completi.
