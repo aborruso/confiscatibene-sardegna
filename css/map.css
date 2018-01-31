@@ -121,3 +121,8 @@ h2#marker_title {
     font-family: 'Slabo 27px', serif;
     font-size:2rem;
 }
+
+path {
+  fill:#EB593C;
+  stroke:#EB593C;
+}

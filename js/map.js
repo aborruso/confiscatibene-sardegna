@@ -9,6 +9,18 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 var gsheetSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRj_8QPjxAq9VDaTvU1xbR9ZSJls4pLY9jN0itafpMuqXgMT05oGNHeGG8bab1cTZF7_G_dL57AvB49/pub?gid=0&single=true&output=csv';
 var cbData = omnivore.csv(gsheetSource, null, L.mapbox.featureLayer()).addTo(map);
 
+
+// aggiungo di sfondo il perimetro amministrativo del lazio
+$.ajax({
+    url: 'js/comuni.geojson',
+    dataType: 'json',
+    success: function load(d) {
+        var perimetro = L.geoJson(d).addTo(map);
+      }
+    });
+
+
+
 // funzione per I FILTRI
 
 $('#search').keyup(search);
