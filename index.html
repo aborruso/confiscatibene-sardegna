@@ -1,231 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
-  <head>
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <!-- Opengraph meta -->
+  <meta property="og:title" content="Brancaccio (Palermo): vogliamo un bene | Un richiesta degli studendti del liceo Danilo Dolci" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://danilodolci.confiscatibene.it" />
+  <meta property="og:image" content="http://danilodolci.confiscatibene.it/img/share.jpg" />
+  <meta property="og:description" content="Un magazzino di un'azienda sequestrata alla mafia, chiuso da circa vent'anni, che potrebbe diventare uno spazio per attività ricreative, una palestra, un teatro, un caffè-biblioteca o un luogo di ritrovo.">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brancaccio (Palermo): vogliamo un bene. Un richiesta degli studendti del liceo Danilo Dolci">
+  <meta name="twitter:description" content="Un magazzino di un'azienda sequestrata alla mafia, chiuso da circa vent'anni, che potrebbe diventare uno spazio per attività ricreative, una palestra, un teatro, un caffè-biblioteca o un luogo di ritrovo.">
+  <meta name="twitter:image" content="https://i.imgur.com/OskYfVp.jpg">
+  
+  <title>Brancaccio (Palermo): vogliamo un bene | Un richiesta degli studendti del liceo Danilo Dolci</title>
+  
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/map.css" rel="stylesheet">
+  
+</head>
 
-    <!-- Opengraph meta -->
-    <meta property="og:title" content="I beni confiscati in Sardegna - ConfiscatiBene" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://sardegna.confiscatibene.it" />
-    <meta property="og:image" content="http://sardegna.confiscatibene.it/img/splash.png" />
-    <meta property="og:description" content="Beni confiscati in via definitiva nell'isola: 52 immobili, tra case e terreni, affidati a 16 Comuni di tutta l'isola. Quasi due su tre restano inutilizzati. Molti comuni non rispondono al FOIA">
-
-    <title>Beni confiscati in Sardegna: inchiesta degli studenti dell'università di Sassari, dal FOIA al Data Journalism</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-
-    <!-- Leaflet/Mapbox for map -->
-    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/clean-blog.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/map.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="./">Sardegna.Confiscatibene.it</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#intro">Intro</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#isola">Isola felice?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#mappa">Mappa del riuso</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#foia">Richieste FOIA</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">Il progetto</a>
-            </li>
-          </ul>
-        </div>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="./">danilodolci.confiscatibene.it</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#intro">Intro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#richiesta">La richiesta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#anche-tu">Chiedilo anche tu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rassegna-stampa">Sitografia</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/golfoaranci2.jpeg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="post-heading">
-              <h1>Gli immobili della criminalità organizzata</h1>
-              <h2 class="subheading">Viaggio alla scoperta dei beni confiscati in Sardegna</h2>
-              <span class="meta"><mark>Inchiesta degli studenti del corso di Comunicazione e partecipazione politica dell'Università di Sassari
-                <br>Ultimo aggiornamento dei dati: 01/02/2018
-                <br></mark>(Nella foto: l'accesso diretto alla spiaggia dal giardino condominiale di un appartamento confiscato alla mafia a Golfo Aranci)</span>
-            </div>
+    </div>
+  </nav>
+  
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/brancaccioBg2_lr.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Brancaccio (Palermo): vogliamo un bene</h1>
+            <h2 class="subheading">Una richiesta degli studenti del liceo Danilo Dolci</h2>
+            <div class="homebox">Un magazzino di un'azienda sequestrata alla mafia, chiuso da circa vent'anni, che potrebbe diventare uno spazio per attività ricreative, una palestra, un teatro, un caffè-biblioteca o un luogo di ritrovo.</div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
+  
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h2 id="intro" class="section-heading">Introduzione</h2>
+          <!--<span class="byline">di ...</span>-->
+          <p> Valentina Sansone ... ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex lacus, euismod nec nulla a, vehicula vestibulum massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris congue dictum mi congue lacinia. Nulla nec velit cursus, dignissim nulla quis, porta urna. </p><p>Integer vel dolor quis odio venenatis sodales vel a libero. Cras ac vehicula sem, nec viverra lacus. Morbi scelerisque urna vel odio elementum, ac consequat nulla facilisis. Maecenas euismod, velit quis ullamcorper pulvinar, massa odio ultricies magna, nec aliquet sapien turpis nec eros. </p>
+          
+          <h2 id="richiesta" class="section-heading">📣 La richiesta</h2>
+          <!--richiesta-->
+          <div align="right">
 
-    <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <h2 id="intro" class="section-heading">Gli immobili confiscati alla criminalità organizzata</h2>
-              <span class="byline">di Sara D'Angelo, Laura Dettori, Valeria Dettori, Stefano Sanna</span>
-                   <p> In Sardegna sono 102 i beni immobili confiscati in via definitiva alla mafia, secondo i dati messi a disposizione da ANBSC su <a target= "blank" href="https://openregio.it/statistiche/visualizza/beni_destinati/immobili">Open RE.G.I.O.</a> Parliamo di enormi quantità di ricchezze sottratte ad associazioni mafiose destinate a nuova vita per scopi sociali o istituzionali.
-                      <br><br>Le leggi che hanno rivoluzionato il panorama italiano in materia di confisca dei beni alla mafia sono state: la <a target="blank" href="http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1982;646">L. 646/82</a> (Rognoni-La Torre) che prevede la confisca dei beni dai soggetti accusati di associazionismo mafioso e introduce  un nuovo articolo al codice penale, il  416 bis, e la <a target="_blank" href="http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1996-03-07;109!vig=2013-10-17">L. 109/96</a> sul riutilizzo dei beni confiscati alle mafie proposta nel 1995  in seguito ad una raccolta firme promossa dell’<a target="_blank" href="http://www.libera.it/schede-7-la_storia_dell_associazione">Associazione Libera</a>. Altra svolta importante nel panorama normativo è rappresentata dal codice delle leggi antimafia e delle misure di prevenzione (<a target="_blank" href="http://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2011-09-28&atto.codiceRedazionale=011G0201">D.lgs 159/2011</a>) che si è posto come punto di riferimento completo per migliorare l'efficienza delle procedure di gestione, destinazione e assegnazione dei beni confiscati. Con la recente modifica del codice antimafia (<a target="_blank" href="http://www.gazzettaufficiale.it/eli/id/2017/11/4/17G00176/sg">L. 161/2017</a>) sono state introdotte nuove misure di prevenzione che hanno ampliato i possibili destinatari.
-                      <br><br>Il processo che porta dalla confisca all’assegnazione e all’effettivo utilizzo del bene può durare dagli otto ai dieci anni (come descritto nel report <a target="_balk" href="http://speciali.gelocal.it/static/nazionale/2016/beni-confiscati/">Riprendiamoli</a>) e prevede che l’Agenzia Nazionale (ANBSC), che prende in consegna i beni confiscati, li trasferisca nel patrimonio indisponibile dello Stato o degli Enti locali, in particolare i Comuni che possono usarli per fini istituzionali o affidarli a titolo gratuito ad associazioni o cooperative per finalità sociali (<a target="_blank" href="https://docs.google.com/spreadsheets/d/1GDVTTVwVLJwIrrKfjLy_alcsOHIyubNoC-1Hz7ZBFXQ/edit?usp=sharing">leggi la normativa</a>).
-                   </p>
-            <img src="img/infografica.jpeg" width="100%" alt="Infografica: dalla confisca al riuso degli immobili" />
-                   <p>Nell'ambito del progetto ConfiscatiBene Sardegna, abbiamo monitorato il riuso dei <B>beni immobili confiscati in via definitiva ed affidati ai Comuni della regione:</B> appartamenti, palazzi e terreni frutto di attività illecite.
-                   <br>Il progetto - sviluppato in collaborazione con <a target="_blank" href="http://ondata.it/">Ondata</a> e <a target="_blank" href="http://www.libera.it/">Libera</a> - ha tre obiettivi: 1) fornire informazioni su cosa sono i beni confiscati alla criminalità organizzata, raccogliere e rendere facilmente consultabili i dati e le informazioni sui beni immobili confiscati in Sardegna e raccontare le storie del riuso (o del non-riuso); 2) fare da "pungolo" alle amministrazioni locali a cui i beni sono stati assegnati, perché competano sulla qualità dei processi di trasparenza e apertura dei dati sui beni confiscati e perché riconoscano il valore dei processi attraverso cui un bene sottratto alla criminalità trova una seconda vita e produce nuove risorse; 3) dimostrare che un bene confiscato può diventare un'occasione, anche di lavoro, per i giovani: come dimostrano alcuni esempi virtuosi raccolti all'interno del nostro dossier sulle best practices a livello nazionale, in cui illustriamo proprio il riutilizzo di alcuni beni da parte dei giovani.
-                   </p>
-            <h2 id="isola" class="section-heading">Sardegna: isola felice?</h2>
-              <span class="byline">di Claudia Casu, Maria Roberta Orrù, Mattia Serra</span>
-                    <p>Esistono beni confiscati in Sardegna? Sì, anche l’isola non è immune ai fenomeni di stampo mafioso, a partire dall’anonima sequestri negli anni Settanta e successivamente nei primi anni Novanta all’usura e ricettazione, fino ai tentacoli della banda della Magliana (<a target="_blank" href="http://ricerca.gelocal.it/lanuovasardegna/archivio/lanuovasardegna/2007/07/16/SL3PO_SL303.html">leggi</a>).
-L’isola è una terra appetibile soprattutto per chi ha la volontà di riciclare denaro sporco approfittando del turismo e degli investimenti immobiliari, come ha dichiarato la Presidente della Commissione Antimafia Rosy Bindi, durante una visita in Sardegna (<a target="_blank" href="http://www.lanuovasardegna.it/regione/2017/05/17/news/sardegna-a-rischio-mafia-bindi-tenere-alta-la-guardia-1.15352002">leggi</a>).
-                      <br><br>In Sardegna, i beni confiscati con sentenza definitiva e affidati agli Enti locali dall’Agenzia Nazionale sono sparsi in 16 diversi Comuni: Sassari, Quartu Sant’Elena, Olbia, Alghero, Iglesias, Sinnai, Arzachena, Dolianova, Uta, Dorgali, Muravera, Villasimius, Loiri Porto San Paolo, Golfo Aranci, Lula, Gergei.
-                      <br><br>Spesso i Comuni li tengono in carico senza nessun progetto di riutilizzo, altre volte riescono ad affidarli ad associazioni e, in questo modo, i beni sono restituiti alla collettività per fini socialmente utili.
-Abbiamo raccolto numerosi articoli delle testate locali e nazionali, che raccontano nei dettagli i fenomeni malavitosi che hanno portato alle confische in Sardegna(<a target="_blank" href="https://docs.google.com/spreadsheets/d/1Tghs_8cdlQ4G5-bVJzvPwfDWNSRvjAgxLBf95ucqzZ0/edit?usp=sharing">leggi</a>); abbiamo monitorato i beni per sapere se fossero riutilizzati e abbiamo raccontato le loro storie; contestualmente abbiamo osservato la trasparenza delle pubbliche amministrazioni, obbligate a rendere noti i dati sui beni confiscati, che in molti casi hanno provveduto alla pubblicazione solo dopo il nostro interessamento.
-                      <br>Qui di seguito troverai una mappa della Sardegna in cui puoi visualizzare le storie sui beni confiscati e un'infografica che sintetizza l'impatto delle nostre richieste FOIA sulla trasparenza e l'uso dei dati aperti da parte dei Comuni affidatari.
-                      <blockquote class="blockquote">Beni confiscati in via definitiva nell'isola: 52 immobili, tra case e terreni, affidati a 16 Comuni di tutta l'isola. Quasi due su tre restano inutilizzati</blockquote>
-                      <br><br><mark><strong>Una precisazione:</strong></mark> i beni immobili confiscati in via definitiva in Sardegna secondo i dati <a target="_blank" href="https://openregio.it/statistiche/visualizza/beni_destinati/immobili">Open Re.G.I.O.</a> aggiornati al 27/09/2017 sono 102, ma questo numero si riferisce alle particelle catastali singole e non all'intero bene: nella maggior parte dei casi, un box auto e l'appartamento in cui si trova il box auto, ad esempio, sono formati da più particelle catastali che rappresentano (per l’ ANBSC) due diversi beni confiscati. A questi 102 abbiamo sottratto i beni affidati a Enti diversi dai Comuni (Polizia di Stato, Carabinieri, Corpo forestale dello Stato, Ministeri) e abbiamo aggregato le particelle catastali, ottenendo un totale di 52 beni immobili.
-                      </p>
-            <h2 id="mappa" class="section-heading">Mappa del riuso</h2>
-                      <p>I dati che abbiamo raccolto del nostro monitoraggio (indirizzo dei beni, tipologia, riuso, dati dell'ente gestore, dati sul progetto di riuso) sono consultabili in questa <a target="_blank" href="https://docs.google.com/spreadsheets/d/1Igb0pqYDlF7iocA6040hqYOmwP6OxTZbE9GRpx3rZjU/edit?usp=sharing">tabella di riepilogo</a>. Nella mappa che segue è possibile leggere le storie che abbiamo raccontato a partire da questi dati. Le storie dei beni restituiti al patrimonio pubblico, di beni non riutilizzati e di amministrazioni inadempienti. Per realizzare la mappa, è stato utilizzato un <a target="_blank" href="http://dati.regione.sardegna.it/dataset/limiti-amministrativi-comunali">dataset open</a> che ci consente di rendere, a nostra volta, riutilizzabile la nostra mappa, aperta ad altre possibilità di riuso, integrazioni e contributi. 
-            <!-- INIZIO mappa integrata -->
-
-            <div id='map'>
-              <input id='search' class='search-ui' placeholder='Cerca un Comune' />
+            Professore <strong>Leoluca Orlando</strong>, Sindaco della città di Palermo (<a href="mailto:sindaco@comune.palermo.it">sindaco@comune.palermo.it</a>)<br>
+            Dott. <strong>Sergio Pollicita</strong>, Capo di Gabinetto del Comune di Paerlmo (<a href="mailto:capogabinettosindaco@comune.palermo.it">capogabinettosindaco@comune.palermo.it</a>)<br>
+            Prefetto <strong>Ennio Mario Sodano</strong>, Direttore A.N.B.S.C. (<a href="mailto:segreteria.pa@anbsc.it">segreteria.pa@anbsc.it</a>)<br>
+            <strong>Valeria Fedeli</strong>, Ministra dell&#39;Istruzione, dell&#39;Università e della Ricerca (<a href="mailto:ministra@istruzione.it">ministra@istruzione.it</a>)<br>
+            Dott. <strong>Leonardo Agueci</strong>, Presidente Fondazione Progetto Legalità ONLUS (<a href="mailto:info@progettolegalita.it">info@progettolegalita.it</a>)
             </div>
-
-            <!-- Modal to be populated on click -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="modal-title">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h2 id="marker_title" class=""></h2>
-                    </div>
-                    <hr class="hr-primary" />
-                    <h3 id="marker_place"></h3>
-                    <p id="marker_content" class=""></p>
-                    <div id="marker_media" class=""></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-            <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-
-                <script src="js/map.js"></script>
-
-            <!-- FINE mappa integrata -->
-
-
-
-            <h2 id="foia" class="section-heading">Le richieste FOIA</h2>
-              <span class="byline">di Sara D'Angelo e Elisa Mulas</span>
-                  <p>Per conoscere lo stato attuale dei beni confiscati in Sardegna il punto di partenza è stato il dataset elaborato da <a target="_blank" href="https://openregio.it/statistiche/visualizza/beni_destinati/immobili">Open Re.G.I.O.</a>, piattaforma ufficiale dell’Agenzia Nazionale per l’Amministrazione dei Beni Sequestrati e Confiscati alla criminalità organizzata (<a target="_blank" href="https://openregio.it/statistiche/visualizza/beni_destinati/immobili">leggi</a>), da cui abbiamo appreso quali fossero i Comuni interessati, nei siti dei quali abbiamo verificato che fossero presenti (come previsto dalla normativa) i dati in formato aperto riguardanti i beni e il loro riutilizzo. Nella maggior parte dei casi la sezione amministrazione trasparente non presentava affatto i dati, e solo in rari casi potevano ritenersi completi.
-Il passo successivo, quindi, è stato inviare ai Comuni le richieste Foia (<a target="_blank" href="http://www.funzionepubblica.gov.it/foia-7">leggi</a>) per l’accesso ai dati in formato aperto e la conseguente pubblicazione sui loro siti: abbiamo utilizzato il modello Foia-pop (<a target="_blank" href="http://www.foiapop.it/">www.foiapop.it</a>) che permette di compilare in maniera semplice ed intuitiva le richieste di accesso, in questo caso un accesso civico generalizzato. L’invio alle amministrazioni è avvenuto sia tramite mail semplice che tramite PEC.
-                    Alle richieste, come previsto dalla legge (<a target="_blank" href="http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33!vig=">d.lgs 33/2013</a>), i Comuni sono obbligati a rispondere entro trenta giorni dall’inoltro delle richieste ma in molti casi, o per mancata risposta o perché la richiesta era stata accolta solo parzialmente, è stato necessario inviare una richiesta di riesame, per la quale il termine è di 20 giorni. (<a target="_blank" href="https://docs.google.com/spreadsheets/d/1mHLL3bRHKyg4zvFHvYQs2G4ZM3NKauDA0pfCD7CFV9s/edit?usp=sharing">Leggi la normativa di riferimento</a>)
-                   <br><br>L’impatto delle nostre azioni c’è stato: abbiamo registrato molte inadempienze iniziali, alcuni comuni non hanno risposto nemmeno al secondo sollecito, ma in molti casi abbiamo riscontrato la pubblicazione o l’aggiornamento dei dati proprio a seguito delle nostre istanze. (<a target="_blank" href="https://docs.google.com/spreadsheets/d/1vU8DPNsQoSXWDwfxGuyBXweRtPe-oCkYbtIuXOztgZs/edit?usp=sharing">Leggi il riepilogo di tutte le richieste inviate e delle risposte ricevute</a>)
-          </p>
-                    <img src="img/INFOGRAFICA FOIA DEF..png" width="100%" alt="Infografica: le richieste foia inviate e l'impatto dell'inchiesta"/>
-            <h2 id="about" class="section-heading">Il progetto</h2>
-              <span class="byline">di Elisa Mulas</span>
-                  <p>Questo lavoro è stato realizzato - nell'ambito dell'insegnamento di "Comunicazione e Partecipazione Politica" dell'Università di Sassari - da Elisa Mulas (project manager), Claudia Casu, Sara D’Angelo, Laura Dettori, Valeria Dettori, Giorgio Fois, Maria Roberta Orrù, Stefano Sanna e Mattia Serra, con il coordinamento di <a target="_blank" href="https://www.uniss.it/ugov/person/1698">Laura Iannelli</a> e di <a target="_blank" href="https://twitter.com/nelsonmau">Andrea Nelson Mauro</a>.
-                    <br><br>L'inchiesta, che si è focalizzata sulla Sardegna, è stata sviluppata in collaborazione con il progetto nazionale <a target="_blank" href="http://www.confiscatibene.it/it">ConfiscatiBene</a>, curato da <a target="_blank" href="http://ondata.it/">Ondata</a> e <a target="_blank" href="http://www.libera.it/">Libera</a>.
-                    <br><br>Nel realizzare l’inchiesta ci siamo posti due domande di fondo: ci si è chiesti in quale stato fossero i beni confiscati e ci si è interrogati sulla capacità della Pubblica Amministrazione di essere trasparente e di agevolare la conoscenza dei cittadini.
-Dal punto di vista organizzativo abbiamo scelto di affrontare tutte le fasi di lavoro senza attribuire ruoli specifici all'interno del gruppo, per far sì che il progetto rappresentasse, per tutti, un'occasione di apprendimento di molteplici conoscenze e competenze.
-Un membro del gruppo ha avuto il ruolo di project manager e ha quindi coordinato le azioni dei colleghi secondo un cronoprogramma che ha previsto la raccolta dei dati dei Comuni tramite richieste FOIA, richieste di riesame e contatti telefonici o via e-mail; contestualmente abbiamo affrontato la fase scouting in cui alcuni hanno approfondito la normativa nazionale, alcuni hanno catalogato le notizie della stampa nazionale e regionale e alcuni hanno raccolto significative storie di riuso nel contesto nazionale, come stimolo per future iniziative locali. Di seguito il dossier "Best practices" che raccoglie nove esempi italiani di buon riutilizzo di beni confiscati gestiti da cooperative e associazioni, con l'obiettivo di favorire l'occupazione per esempio di giovani e migranti.
-  <!-- best practices di riuso -->
-  <iframe src="//www.slideshare.net/slideshow/embed_code/key/2q1RqEum3GdzRv" width="100%" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-                    <br><br>Dall’incrocio dei dati e delle informazioni raccolte hanno pian piano preso corpo le storie di riuso, di confisca o di trasparenza che ci hanno appassionato, spingendoci in certi casi a recarci sui luoghi per vedere di persona gli immobili raccontati. Le storie costituiscono la nostra mappa: per geolocalizzare i comuni rappresentati sono stati utilizzati: le coordinate geografiche estratte da OpenStreetMap e gli OpenData dei <a href="http://dati.regione.sardegna.it/dataset/limiti-amministrativi-comunali" target="_blank">perimetri amministrativi comunali dal sito OpenData di Regione Sardegna</a>. Durante i mesi di realizzazione abbiamo sviluppato nuove conoscenze e competenze relative ai rapporti tra i cittadini e le amministrazioni pubbliche, agli open data come strumenti di trasparenza, partecipazione e collaborazione, al riuso dei dati aperti attraverso il data-driven journalism, alla visualizzazione e georeferenziazione dei dati, all’organizzazione del lavoro in team.
-                  </p>
-            <h2 class="section-heading">E se hai letto fin qui e vuoi sapere chi siamo...</h2>
-            <p>...puoi dare un'occhiata a questo video :-)
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/rtOBa4FFghk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>           </p>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a target="_blank" href="http://twitter.com/confiscatibene">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a target="_blank" href="http://facebook.com/confiscatibene">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a target="_blank" href="http://github.com/ondata/confiscatibene-sardegna/">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
+            
+            <p><strong>Nuova richiesta di destinazione del Magazzino Sea Beach Immobiliare S.r.l sito in Via Natale Carta n.1 e 3 (già Via BC 20), Palermo.</strong></p>
+            <p>Gentilissime autorità,<br>
+            siamo un gruppo di studenti del <a href="http://www.liceodanilodolci.it/"><strong>Liceo delle Scienze Umane e Linguistico &quot;Danilo Dolci&quot;</strong></a>, sito in Via Fichidindia, nel quartiere di <strong>Brancaccio</strong>, a <strong>Palermo</strong>.</p>
+            <p>Nell&#39;ambito del Workshop su <strong>Open Data</strong> e <strong>monitoraggio civico</strong> - a
+            cura di Andrea Borruso (<a href="http://www.confiscatibene.it/it"><em>Confiscati
+            Bene</em></a>) e con la partecipazione del
+            nostro docente prof. Ferdinando Siringo - che si è svolto presso il
+            nostro Istituto (15-20 marzo 2018) come parte degli eventi preliminari
+            che accompagnano e precedono il progetto &quot;<strong>Beni Confiscati,
+            Architettura, Ideologia e Performance</strong>&quot; a cura di Valentina Sansone (16
+            giugno-4 novembre 2018), abbiamo lavorato a un&#39;indagine giornalistica e constatiamo che:</p>
+            <ul>
+            <li><a href="http://www.gazzettaufficiale.it/eli/id/1996/03/09/096G0120/sg">la legge 109 del 7 marzo 1996</a> (Rognoni La Torre) prevede il
+            <strong>riutilizzo pubblico</strong> e sociale dei beni confiscati alle mafie;</li>
+            <li>secondo i dati pubblicati e aggiornati sul sito
+              <a href="https://openregio.it/"><em>OpenRegio</em></a>, la sola città di Palermo
+              conta <strong>1836 immobili e 145 aziende confiscati e destinati</strong>.</li>
             </ul>
-            <p class="copyright text-muted">
-              Confiscati Bene è un progetto dell'Associazione onData e di Libera. Associazioni, nomi e numeri contro le mafie | email: info@confiscatibene.it | twitter: @confiscatibene | fb: ConfiscatiBene.
-<br><br>
-              È stato realizzato grazie al contributo di Fondazione TIM che è espressione dell'impegno sociale di TIM e la cui missione è promuovere la cultura del cambiamento e dell'innovazione digitale, favorendo l'integrazione, la comunicazione, la crescita economica e sociale.
-<br><br>
-              I contenuti di questo sito (salvo diversamente specificato) sono distribuiti con Licenza CC BY-SA 4 Licenza Creative Commons
-            </p>
+            <p>Tra i beni <strong>ancora non destinati</strong>, ce n&#39;è uno in particolare che ci spinge a scrivere questa lettera. Si tratta di <strong>un ampio magazzino</strong>, intestato alla società SEA BEACH IMMOBILIARE SRL, antistante il nostro istituto (via Natale Carta 1 e 3 - già via BC 20 - a Palermo, foglio 76, numero 886, sub 2, 6, Cat C/2, cl.6).</p>
+            <p>Dal 2000, il Liceo &quot;Danilo Dolci&quot; è situato in un bene confiscato nella
+            zona di Brancaccio, a Palermo, e rappresenta un <strong>presidio di legalità</strong>
+            in un territorio caratterizzato da una forte dispersione scolastica, ad
+            alto rischio di criminalità.</p>
+            <p>Il nostro intento è quello di <strong>ottenere il magazzino confiscato</strong> per
+            <strong>trasformarlo in una palestra e in un luogo dedicato alle attività
+            creative</strong>. Al mattino, lo spazio sarebbe aperto agli studenti del
+            nostro liceo (che oggi non dispongono di un locale per lo svolgimento
+            delle attività motorie), e sarebbe a disposizione di tutto il quartiere
+            per il resto della giornata.</p>
+            <p>Vorremmo <strong>ottenere l&#39;accesso</strong> a un luogo, <strong>chiuso da circa vent&#39;anni</strong>. Se messo a disposizione della
+            comunità e di noi studenti, questo ampio spazio per le attività
+            ricreative può diventare un teatro, un caffè-biblioteca, una palestra o
+            un luogo di ritrovo in cui poter scambiare idee e opinioni.</p>
+            <p>Palermo, <strong>Capitale Italiana della Cultura 2018</strong>, a partire dal 16
+            giugno, accoglierà inoltre <strong>Manifesta 12</strong>, uno tra i più importanti
+            eventi culturali a livello europeo. In questa occasione, il Magazzino
+            potrebbe ospitare &quot;<a href="http://m12.manifesta.org/gli-eventi-collaterali-di-manifesta-12/?lang=it"><em>Beni Confiscati: Architettura, Ideologia e
+            Performance</em></a>&quot;.</p>
+            <p>Il progetto di &quot;The Great Learning Orchestra&quot;, a cura di Valentina
+            Sansone, <strong>è uno dei 62 &quot;Eventi Collaterali&quot; della Biennale</strong>, selezionato
+            tra i circa 700 progetti presentati. Crediamo infatti che la nostra
+            collaborazione a questo evento darebbe maggiore visibilità al nostro
+            Istituto.</p>
+            <p><strong>Già nel 2015</strong>, un gruppo di alunni del Liceo &quot;Danilo Dolci&quot; aveva
+            inviato <a href="https://drive.google.com/open?id=1JLAQqYPC36KuAus0W8TUsNfCStsPnHHs"><em>un
+            appello</em></a> e una
+            <a href="https://www.youtube.com/watch?v=1mf1N_0YvbM&amp;feature=youtu.be"><em>videolettera</em></a> - realizzata nell&#39;ambito del Progetto &quot;Prevenire l&#39;illegalità: Disarmare
+            le mafie creando innovazione sociale, consapevolezza, lavoro&quot;, a cura
+            della <a href="https://progettolegalita.it/it/">Fondazione Progetto Legalità ONLUS</a> - all&#39;Agenzia Nazionale per i
+            Beni Sequestrati Confiscati, alla Provincia di Palermo, a Leoluca
+            Orlando, Sindaco del Comune di Palermo, chiedendo l&#39;assegnazione del
+            magazzino confiscato antistante il nostro Istituto per &quot;realizzare
+            palestre e impianti per attività musicali teatrali e culturali a
+            servizio della scuola stessa e del quartiere&quot;.</p>
+            <p>A quello stesso appello ha fatto seguito la risposta del nostro Sindaco
+            (<a href="http://bit.ly/2HTUmK6"><em>http://bit.ly/2HTUmK6</em></a>), che purtroppo <strong>non
+            ha prodotto ad oggi alcun risultato concreto</strong>: </p>
+            <blockquote>
+            <p>Abbiamo subito accolto positivamente la richiesta degli studenti dell&#39;istituto Danilo Dolci. Siamo in stretto contatto con il direttore dell&#39;Agenzia nazionale dei beni confiscati, il prefetto Umberto Postiglione, con la Provincia e con l&#39;Amministrazione giudiziaria, proprietaria del bene, al fine di favorire la consegna dello stesso all&#39;istituto</p>
+            </blockquote>
+            <p>Stavolta siamo molto fiduciosi di <strong>trovarvi favorevoli</strong>, è arrivato il momento di <strong>cambiare le cose</strong> ed <strong>uscire da questa situazione di stallo</strong>.</p>
+            <p>Grazie e fateci sapere qualcosa,</p>
+            <p><em>Chiara Arnò, Gabriele Bergamaschi, Miriam Cavallaro, Alessia
+            Ciaramitaro, Margherita Contorno, Alessandra D&#39;Amore, Gabriele D&#39;Atria,
+            Aurora Di Bernardo, Elisea Di Dio, Federica Gennaro, Sabrina Labruzzo,
+            Stefania Lo Verde, Vivian Marino, Silvia Noto, Floriana Piraino, Martina
+            Roccamatisi, Federica Russo, Rosario Semoletta, Alessia Villanova,
+            Alessia Zuccarello</em></p>
+
+          <!--richiesta-->
+          <!-- Chiedilo anche tu -->
+
+          <h2 id="anche-tu">🙏 Chiedilo anche tu</h2>
+          <div class="alert alert-success">
+            <strong>Anche tu puoi dare una mano!</strong> Dai diffusione della nostra richiesta sui <strong>social network</strong>, o inviala per <strong>email</strong> ai destinatari che abbiamo scelto.
+          </div>
+
+          <h3>Sui social</h3>
+
+          <a href="https://twitter.com/intent/tweet?source=http://danilodolci.confiscatibene.it" class="btn btn-social-icon btn-twitter" target="_blank" title="Condividi su Twitter" onclick="window.open('https://twitter.com/intent/tweet?text=Anche%20io%20voglio%20che%20il%20ragazzi%20del%20Danilo%20Dolci%20e%20il%20quartiere%20Brancaccio%20possano%20usufruire%20del%20bene%20confiacato%20di%20Via%20Natale%20Carta' + '%20' + '@LeolucaOrlando1 @valeriafedeli @MiurSocial' + '%20%23hashtag' + '%20' + encodeURIComponent(document.URL)); return false;"> <span class="fa fa-fw fa-twitter" aria-hidden="true"></span></a>
+
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://danilodolci.confiscatibene.it" class="btn btn-social-icon btn-facebook" target="_blank" title="Condividi su Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&amp;t=c' + encodeURIComponent(document.URL)); return false;"> <span class="fa fa-fw fa-facebook" aria-hidden="true"></span> </a>
+
+          <h3>Per email</h3>
+
+          <!-- Chiedilo anche tu -->
+            
+          <!--sitografia-->
+          <h2 id="rassegna-stampa">📰 Rassegna stampa</h2>
+            <ul>
+            <li>Comune di Palermo, <a href="https://www.comune.palermo.it/noticext.php?id=7262"><em>https://www.comune.palermo.it/noticext.php?id=7262</em></a></li>
+            <li>Più scuola, meno mafia, <a href="http://www.piuscuolamenomafia.it/news-ed-eventi/148-videolettera-liceo-danilo-dolci-palermo.html"><em>http://www.piuscuolamenomafia.it/news-ed-eventi/148-videolettera-liceo-danilo-dolci-palermo.html</em></a></li>
+            <li>Palermo Today, <a href="http://www.palermotoday.it/social/segnalazioni/scuola-liceo-danilo-dolci-degrado.html"><em>http://www.palermotoday.it/social/segnalazioni/scuola-liceo-danilo-dolci-degrado.html</em></a></li>
+            <li>Rassegna Sindacale, <a href="http://www.rassegna.it/articoli/cgil-palermo-raccolto-appello-studenti-del-liceo-dolci"><em>http://www.rassegna.it/articoli/cgil-palermo-raccolto-appello-studenti-del-liceo-dolci</em></a></li>
+            <li>Ansa.it, <a href="http://www.ansa.it/legalita/rubriche/beniritrovati/2015/05/27/mafia-beni-confiscati-da-studenti-videolettera-ad-agenzia_46b5014f-7385-4a35-9dee-a241178a1f31.html"><em>http://www.ansa.it/legalita/rubriche/beniritrovati/2015/05/27/mafia-beni-confiscati-da-studenti-videolettera-ad-agenzia_46b5014f-7385-4a35-9dee-a241178a1f31.html</em></a></li>
+            <li>L&#39;Espresso, <a href="http://espresso.repubblica.it/attualita/2015/05/27/news/la-video-lettera-degli-studenti-di-palermo-i-beni-dei-boss-dateli-alle-scuole-1.214708?refresh_ce"><em>http://espresso.repubblica.it/attualita/2015/05/27/news/la-video-lettera-degli-studenti-di-palermo-i-beni-dei-boss-dateli-alle-scuole-1.214708?refresh_ce</em></a></li>
+            <li>Sì 24, <a href="https://www.si24.it/2015/05/27/piu-scuola-meno-mafia-videolettera-del-liceo-danilo-dolci-palermo-agenzia-nazionale-dei-beni-confiscati-video/93013/"><em>https://www.si24.it/</em></a><a href="https://www.si24.it/2015/05/27/piu-scuola-meno-mafia-videolettera-del-liceo-danilo-dolci-palermo-agenzia-nazionale-dei-beni-confiscati-video/93013/"><em>2015/05/27/piu-scuola-meno-mafia-videolettera-del-liceo-danilo-dolci-palermo-agenzia-nazionale-dei-beni-confiscati-video/93013/</em></a></li>
+            <li>Ragusa News, <a href="https://www.ragusanews.com/2015/05/29/attualit/mafia-palermo-a-brancaccio-una-palestra-in-immobile-confiscato/53949"><em>https://www.ragusanews.com/2015/05/29/attualit/mafia-palermo-a-brancaccio-una-palestra-in-immobile-confiscato/53949</em></a></li>
+            </ul>
+            <!--sitografia-->
+
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.js"></script>
-
-  </body>
-
-</html>
+      </article>
+      
+      <hr>
+      
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <ul class="list-inline text-center">
+                <li class="list-inline-item">
+                  <a target="_blank" href="http://twitter.com/confiscatibene">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a target="_blank" href="http://facebook.com/confiscatibene">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a target="_blank" href="http://github.com/ondata/confiscatibene-sardegna/">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <p class="copyright text-muted">
+                Confiscati Bene è un progetto dell'Associazione onData e di Libera. Associazioni, nomi e numeri contro le mafie | email: info@confiscatibene.it | twitter: @confiscatibene | fb: ConfiscatiBene.
+                <br><br>
+                È stato realizzato grazie al contributo di Fondazione TIM che è espressione dell'impegno sociale di TIM e la cui missione è promuovere la cultura del cambiamento e dell'innovazione digitale, favorendo l'integrazione, la comunicazione, la crescita economica e sociale.
+                <br><br>
+                I contenuti di questo sito (salvo diversamente specificato) sono distribuiti con Licenza CC BY-SA 4 Licenza Creative Commons
+              </p>
+            </div>
+          </div>
+        </footer>
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Custom scripts for this template -->
+        <script src="js/clean-blog.js"></script>
+        
+      </body>
+      
+      </html>
+      
