@@ -44,9 +44,9 @@ mark {
 }
 
 .homebox {
--webkit-box-shadow: 3px 3px 5px 2px rgba(115,115,115,1);
+/*-webkit-box-shadow: 3px 3px 5px 2px rgba(115,115,115,1);
 -moz-box-shadow: 3px 3px 5px 2px rgba(115,115,115,1);
-box-shadow: 3px 3px 5px 2px rgba(115,115,115,1);
+box-shadow: 3px 3px 5px 2px rgba(115,115,115,1);*/
 background-color: white;
 color: black;
 font-family: 'Lora', 'Times New Roman', serif;
